@@ -2,6 +2,7 @@ packages:
   - "apps/*"
   - "packages/*"
   - "tooling/*"
+  - "oss/*"
   - "infra"
 
 allowBuilds:
@@ -29,3 +30,4 @@ catalogs:
   effect:
     "effect": ^4.0.2
     "@effect/platform-node": ^4.0.2
+    "@effect/platform-bun": ^4.0.2

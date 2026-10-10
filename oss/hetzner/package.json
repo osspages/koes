@@ -1,0 +1,17 @@
+{
+  "name": "@oss/alchemy",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "plan": "alchemy plan --profile cloud",
+    "deploy": "alchemy deploy --profile cloud",
+    "destroy": "alchemy destroy --profile cloud"
+  },
+  "dependencies": {
+    "@effect/platform-bun": "catalog:effect",
+    "@effect/platform-node": "catalog:effect",
+    "alchemy": "catalog:",
+    "effect": "catalog:effect"
+  }
+}

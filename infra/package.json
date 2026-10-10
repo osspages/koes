@@ -11,6 +11,7 @@
     "destroy": "alchemy destroy"
   },
   "dependencies": {
+    "@effect/platform-bun": "catalog:effect",
     "@effect/platform-node": "catalog:effect",
     "alchemy": "catalog:",
     "effect": "catalog:effect"
