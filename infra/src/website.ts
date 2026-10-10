@@ -5,7 +5,7 @@ import { Bucket } from "./bucket.ts";
 export class Website extends Cloudflare.Website.Vite<Website>()("website", {
   env: {
     BUCKET: Bucket,
-    GREETING: "Hello from koes!",
+    GREETING: "Hello from alchemy koes!",
   },
   rootDir: "../apps/web",
 }) {}

@@ -11,12 +11,13 @@
     "destroy": "alchemy destroy"
   },
   "dependencies": {
-    "alchemy": "^2.0.0-beta.81",
-    "effect": "^4.0.2"
+    "@effect/platform-node": "catalog:effect",
+    "alchemy": "catalog:",
+    "effect": "catalog:effect"
   },
   "devDependencies": {
     "@repo/tsconfig": "workspace:*",
-    "@types/node": "^26.6.4",
+    "@types/node": "catalog:",
     "typescript": "catalog:"
   }
 }
