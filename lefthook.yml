@@ -14,3 +14,7 @@ pre-commit:
       glob: "*.{js,jsx,ts,tsx}"
       run: pnpm oxlint --fix {staged_files}
       stage_fixed: true
+    renovate:
+      glob: "{renovate.json,.github/renovate.json}"
+      run: pnpm renovate-config-validator --strict {staged_files}
+      stage_fixed: true

@@ -1,4 +1,8 @@
 allowBuilds:
+  core-js-pure: false
+  dtrace-provider: false
   esbuild: true
   fallow: true
   lefthook: true
+  protobufjs: false
+  re2: false

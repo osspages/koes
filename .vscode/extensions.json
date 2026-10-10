@@ -1,0 +1,7 @@
+{
+  "recommendations": [
+    "oxc.oxc-vscode",
+    "mattpocock.ts-error-translator",
+    "editorconfig.editorconfig"
+  ]
+}
