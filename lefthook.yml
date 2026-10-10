@@ -1,0 +1,16 @@
+commit-msg:
+  commands:
+    commitlint:
+      run: pnpm commitlint --edit {1}
+
+pre-commit:
+  parallel: true
+  commands:
+    format:
+      glob: "*.{js,jsx,ts,tsx,json,jsonc,css}"
+      run: pnpm oxfmt --write {staged_files}
+      stage_fixed: true
+    lint:
+      glob: "*.{js,jsx,ts,tsx}"
+      run: pnpm oxlint --fix {staged_files}
+      stage_fixed: true

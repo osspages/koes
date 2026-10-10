@@ -1,0 +1,27 @@
+# Dependencies
+node_modules/
+
+# Build outputs
+dist/
+build/
+out/
+
+# Caches
+.turbo/
+.cache/
+
+# Env files
+.env
+.env.local
+.env.*.local
+
+# Logs
+*.log
+.pnpm-debug.log*
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Fallow
+.fallow/
