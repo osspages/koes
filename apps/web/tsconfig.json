@@ -1,0 +1,16 @@
+{
+  "extends": "@repo/tsconfig/app/dom",
+  "compilerOptions": {
+    "allowImportingTsExtensions": true,
+    "jsx": "react-jsx",
+    "lib": ["dom", "dom.iterable", "es2024"],
+    "module": "esnext",
+    "target": "es2024",
+    "paths": {
+      "~/*": ["./src/*"]
+    },
+    "types": ["vite/client", "@cloudflare/workers-types"]
+  },
+  "include": ["**/*.ts", "**/*.tsx", "**/*.d.ts"],
+  "exclude": ["node_modules"]
+}

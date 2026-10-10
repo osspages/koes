@@ -1,0 +1,9 @@
+{
+  "extends": "@repo/tsconfig/app/no-dom",
+  "compilerOptions": {
+    "allowImportingTsExtensions": true,
+    "types": ["node"]
+  },
+  "include": ["alchemy.run.ts", "**/*.ts"],
+  "exclude": ["node_modules"]
+}

@@ -6,8 +6,13 @@
   "type": "module",
   "scripts": {
     "prepare": "lefthook install",
+    "build": "turbo build",
+    "clean": "turbo clean",
+    "deploy": "turbo run deploy",
+    "dev": "turbo dev",
     "fmt": "oxfmt",
     "lint": "oxlint",
+    "typecheck": "turbo typecheck",
     "check": "ultracite check",
     "fix": "ultracite fix",
     "fallow": "fallow",
@@ -22,7 +27,8 @@
     "oxfmt": "^0.72.0",
     "oxlint": "^1.87.0",
     "renovate": "^44.148.5",
-    "typescript": "^7.0.2",
+    "turbo": "^2.0.0",
+    "typescript": "catalog:",
     "ultracite": "^7.12.4"
   },
   "devEngines": {

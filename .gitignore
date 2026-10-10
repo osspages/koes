@@ -5,10 +5,16 @@ node_modules/
 dist/
 build/
 out/
+.output/
+.nitro/
+.tanstack/
 
 # Caches
 .turbo/
 .cache/
+
+# Alchemy
+.alchemy/
 
 # Env files
 .env

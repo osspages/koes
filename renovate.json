@@ -26,30 +26,30 @@
   },
   "packageRules": [
     {
-      "description": "patch :: group all, automerge via platform merge queue after 3-day cooldown",
+      "description": "patch :: group all, automerge via platform merge queue after dashboard approval",
       "groupName": "All patch updates",
       "matchUpdateTypes": ["patch"],
-      "minimumReleaseAge": "3 days",
+      "dependencyDashboardApproval": true,
       "automerge": true,
       "platformAutomerge": true,
       "labels": ["dependencies", "patch", "automerge"]
     },
     {
-      "description": "dev minor :: automerge but not via platform :: allows sanity check on e.g. new lint rules",
+      "description": "dev minor :: automerge but not via platform after dashboard approval :: allows sanity check on e.g. new lint rules",
       "groupName": "Dev dependency minor updates",
       "matchDepTypes": ["devDependencies"],
       "matchUpdateTypes": ["minor"],
-      "minimumReleaseAge": "3 days",
+      "dependencyDashboardApproval": true,
       "automerge": true,
       "platformAutomerge": false,
       "labels": ["dependencies", "dev", "automerge"]
     },
     {
-      "description": "prod minor :: PR only, 5-day cooldown :: behavioral changes may affect users",
+      "description": "prod minor :: PR only after dashboard approval :: behavioral changes may affect users",
       "groupName": "Production dependency minor updates",
       "matchDepTypes": ["dependencies"],
       "matchUpdateTypes": ["minor"],
-      "minimumReleaseAge": "5 days",
+      "dependencyDashboardApproval": true,
       "automerge": false,
       "labels": ["dependencies", "minor"]
     },

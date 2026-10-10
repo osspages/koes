@@ -1,3 +1,9 @@
+packages:
+  - "apps/*"
+  - "packages/*"
+  - "tooling/*"
+  - "infra"
+
 allowBuilds:
   core-js-pure: false
   dtrace-provider: false
@@ -6,3 +12,7 @@ allowBuilds:
   lefthook: true
   protobufjs: false
   re2: false
+  workerd: true
+
+catalog:
+  typescript: ^7.0.2
