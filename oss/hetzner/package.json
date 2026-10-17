@@ -4,9 +4,9 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "plan": "alchemy plan --profile cloud",
-    "deploy": "alchemy deploy --profile cloud",
-    "destroy": "alchemy destroy --profile cloud"
+    "plan": "alchemy plan",
+    "deploy": "alchemy deploy",
+    "destroy": "alchemy destroy"
   },
   "dependencies": {
     "@effect/platform-bun": "catalog:effect",
