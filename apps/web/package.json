@@ -11,21 +11,21 @@
     "build": "vite build"
   },
   "dependencies": {
-    "@tanstack/react-router": "^1.170.41",
-    "@tanstack/react-start": "^1.168.60",
+    "@tanstack/react-router": "1.170.41",
+    "@tanstack/react-start": "1.168.60",
     "alchemy": "catalog:",
     "effect": "catalog:effect",
-    "react": "catalog:react",
-    "react-dom": "catalog:react"
+    "react": "19.3.0",
+    "react-dom": "19.3.0"
   },
   "devDependencies": {
-    "@cloudflare/workers-types": "catalog:",
+    "@cloudflare/workers-types": "5.20261009.1",
     "@repo/tsconfig": "workspace:*",
     "@types/node": "catalog:",
-    "@types/react": "catalog:react",
-    "@types/react-dom": "catalog:react",
-    "@vitejs/plugin-react": "^6.1.2",
+    "@types/react": "19.3.0",
+    "@types/react-dom": "19.3.0",
+    "@vitejs/plugin-react": "6.1.2",
     "typescript": "catalog:",
-    "vite": "^8.3.4"
+    "vite": "8.3.4"
   }
 }

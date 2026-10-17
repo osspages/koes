@@ -19,17 +19,17 @@
     "fallow:health": "fallow health --format human"
   },
   "devDependencies": {
-    "@commitlint/cli": "^21.2.3",
-    "@commitlint/config-conventional": "^21.2.3",
+    "@commitlint/cli": "21.2.3",
+    "@commitlint/config-conventional": "21.2.3",
     "@types/node": "catalog:",
-    "fallow": "^3.32.0",
-    "lefthook": "^2.2.1",
-    "oxfmt": "^0.72.0",
-    "oxlint": "^1.87.0",
-    "renovate": "^44.148.5",
-    "turbo": "^2.0.0",
+    "fallow": "3.32.0",
+    "lefthook": "2.2.1",
+    "oxfmt": "0.72.0",
+    "oxlint": "1.87.0",
+    "renovate": "44.148.6",
+    "turbo": "2.11.7",
     "typescript": "catalog:",
-    "ultracite": "^7.12.4"
+    "ultracite": "7.12.4"
   },
   "devEngines": {
     "packageManager": {

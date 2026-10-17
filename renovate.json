@@ -7,12 +7,15 @@
     "group:recommended"
   ],
   "dependencyDashboard": true,
-  "prConcurrentLimit": 10,
-  "prHourlyLimit": 5,
+  "prConcurrentLimit": 4,
+  "prHourlyLimit": 2,
   "rangeStrategy": "bump",
-  "baseBranchPatterns": ["main"],
+  "baseBranchPatterns": ["dev"],
   "postUpdateOptions": ["pnpmDedupe"],
-  "schedule": ["after 9am every weekday", "before 5am every weekday"],
+  "schedule": ["before 5am on Monday"],
+  "updateNotScheduled": false,
+  "rebaseWhen": "conflicted",
+  "semanticCommitType": "chore",
   "labels": ["dependencies"],
   "vulnerabilityAlerts": {
     "enabled": true,
@@ -21,35 +24,36 @@
   },
   "lockFileMaintenance": {
     "enabled": true,
-    "automerge": false,
+    "automerge": true,
+    "platformAutomerge": true,
     "schedule": ["before 5am on Monday"]
   },
   "packageRules": [
     {
-      "description": "patch :: group all, automerge via platform merge queue after dashboard approval",
-      "groupName": "All patch updates",
+      "description": "auto :: patch (all) + dev minor in one branch, automerge via queue after 3-day cooldown",
+      "groupName": "Auto-merge updates",
       "matchUpdateTypes": ["patch"],
-      "dependencyDashboardApproval": true,
+      "minimumReleaseAge": "3 days",
       "automerge": true,
       "platformAutomerge": true,
-      "labels": ["dependencies", "patch", "automerge"]
+      "labels": ["dependencies", "automerge"]
     },
     {
-      "description": "dev minor :: automerge but not via platform after dashboard approval :: allows sanity check on e.g. new lint rules",
-      "groupName": "Dev dependency minor updates",
+      "description": "auto :: dev minor joins the same branch as patch",
+      "groupName": "Auto-merge updates",
       "matchDepTypes": ["devDependencies"],
       "matchUpdateTypes": ["minor"],
-      "dependencyDashboardApproval": true,
+      "minimumReleaseAge": "3 days",
       "automerge": true,
-      "platformAutomerge": false,
-      "labels": ["dependencies", "dev", "automerge"]
+      "platformAutomerge": true,
+      "labels": ["dependencies", "automerge"]
     },
     {
-      "description": "prod minor :: PR only after dashboard approval :: behavioral changes may affect users",
+      "description": "prod minor :: PR only, 5-day cooldown :: behavioral changes may affect users",
       "groupName": "Production dependency minor updates",
       "matchDepTypes": ["dependencies"],
       "matchUpdateTypes": ["minor"],
-      "dependencyDashboardApproval": true,
+      "minimumReleaseAge": "5 days",
       "automerge": false,
       "labels": ["dependencies", "minor"]
     },
@@ -59,14 +63,14 @@
       "dependencyDashboardApproval": true,
       "automerge": false,
       "groupName": "Major version updates",
-      "labels": ["dependencies", "major", "breaking-change"],
-      "prPriority": -1
+      "labels": ["dependencies", "major", "breaking-change"]
     },
     {
-      "description": "pnpm catalog :: exact pins have no range so replace is used instead of bump",
+      "description": "pnpm catalog :: exact pins have no range so replace is used instead of bump :: 7-day quarantine (runtime foundation)",
       "matchManagers": ["pnpm"],
       "matchDepTypes": ["pnpmCatalog"],
       "rangeStrategy": "replace",
+      "minimumReleaseAge": "7 days",
       "automerge": false,
       "labels": ["dependencies", "catalog"]
     }
