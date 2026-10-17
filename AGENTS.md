@@ -21,3 +21,13 @@ Source of truth: exact pins + `pnpm-lock.yaml`. No drift.
 - Containers: exact tag + digest, no `:latest`/floating majors.
 
 Agent: DO frozen installs + Renovate PRs. NEVER hand-edit versions, widen ranges, add build scripts, float tags.
+
+## Reference hygiene
+
+Reference repos / web examples are for patterns only, never source text. Never copy identifiers, strings, comments, docs, or commit messages from outside this repo. Always derive naming from this repo: `apps/*`, `packages/*`, `memory/brand/*`.
+
+## Comment style
+
+One insight per line, interrogation-first: `// What :: ...`, `// Why :: ...`, `// How :: ...`, `// When :: ...`, `// Where :: ...`, `// Which :: ...`, `// Note :: ...`, `// E.g. :: ...`. Keep lines brief and plain-spoken. No block comments. Tool directives (`oxlint-`, `eslint`, `@ts-`) stay as-is.
+
+Comments whose content starts with `::` (e.g. `{/* :: Social Icons */}`) are pinned — agents leave them exactly as-is: no cleanup, rewriting, or deletion.
