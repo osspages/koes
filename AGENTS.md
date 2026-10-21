@@ -31,3 +31,7 @@ Reference repos / web examples are for patterns only, never source text. Never c
 One insight per line, interrogation-first: `// What :: ...`, `// Why :: ...`, `// How :: ...`, `// When :: ...`, `// Where :: ...`, `// Which :: ...`, `// Note :: ...`, `// E.g. :: ...`. Keep lines brief and plain-spoken. No block comments. Tool directives (`oxlint-`, `eslint`, `@ts-`) stay as-is.
 
 Comments whose content starts with `::` (e.g. `{/* :: Social Icons */}`) are pinned — agents leave them exactly as-is: no cleanup, rewriting, or deletion.
+
+## Interaction log
+
+Every agent, including subagents, writes one log file at the end of its run; never edit older logs. Path, fields and format live in the spec: `memory/agents/interaction-log.mdx`.
