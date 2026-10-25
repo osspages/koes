@@ -18,7 +18,7 @@ allowBuilds:
 
 catalog:
   "@types/node": 24.19.1
-  alchemy: 2.0.0-beta.81
+  alchemy: 2.0.0-beta.84
   typescript: 7.0.2
 
 catalogs:

@@ -1,5 +1,5 @@
+import * as Cloudflare from "@alchemy.run/cloudflare";
 import * as Alchemy from "alchemy";
-import * as Cloudflare from "alchemy/Cloudflare";
 import * as Effect from "effect/Effect";
 
 import { Website } from "./src/website.ts";
@@ -8,7 +8,7 @@ export default Alchemy.Stack(
   "koes",
   {
     providers: Cloudflare.providers(),
-    state: Alchemy.localState(),
+    state: Cloudflare.state({ name: "koes" }),
   },
   Effect.gen(function* () {
     const website = yield* Website;

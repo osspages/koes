@@ -1,4 +1,4 @@
-import * as Hetzner from "alchemy/Hetzner";
+import * as Hetzner from "@alchemy.run/hetzner";
 
 export const Key = Hetzner.SshKey("omarchy", {
   publicKey:
